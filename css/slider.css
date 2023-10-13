@@ -1,0 +1,157 @@
+--------- slider ---------
+
+.slider-block {
+    /* padding-top: 50px; */
+    height: 80vh;
+}
+
+.slider {
+    width: 1300px;
+    max-width: 100vw; 
+    margin: auto;
+    position: relative;
+    height: 80vh;
+    overflow: hidden;
+}
+.list{
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: max-content;
+    transition: 1s;
+}
+.slider img {
+    width: 1300px;
+    max-width: 100vw;
+    height: 100vh;
+    /* object-fit: cover; */
+}
+.buttons{
+    position: absolute;
+    top: 45%;
+    left: 5%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+.buttons button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fff5;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+.dots{
+    position: absolute;
+    bottom: 10px;
+    color: #fff;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+.dots li {
+    list-style: none;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    margin: 20px;
+    border-radius: 20px;
+    transition: 1s;
+}
+.dots li.active{
+    width: 30px;
+}
+@media screen and (max-width: 768px) {
+    .slider{
+        height: 400px;
+    }
+}
+
+
+
+
+
+
+
+.banner {
+    background: url(../images/banner.png) 0 0 repeat;
+    position: absolute;
+    z-index: 100;
+    top: 50%;
+    left: 5%;
+    width: 270px;
+    height: 400px;
+    font-size: 11px;
+    line-height: 22px;
+    color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.banner>div {
+    padding: 40px 30px 0px 40px;
+}
+
+.banner span {
+    display: block;
+    font-size: 35px;
+    line-height: 42px;
+    color: #353535;
+    font-weight: bold;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.banner strong {
+    display: block;
+    font-size: 20px;
+    line-height: 25px;
+    color: #9f9fa6;
+    font-weight: bold;
+    font-family: 'Open Sans Condensed', sans-serif;
+    margin-top: -3px;
+}
+
+.banner p {
+    text-transform: uppercase;
+    margin-top: 18px;
+}
+
+.banner a {
+    margin-top: 52px;
+}
+
+.prev {
+    position: absolute;
+    top: 180px;
+    left: 0px;
+    background: url(../images/prev.gif) 0 0 no-repeat;
+    width: 23px;
+    height: 41px;
+    z-index: 111 !important;
+    display: inline-block;
+}
+
+.prev:hover {
+    background-position: 0 bottom;
+}
+
+.next {
+    position: absolute;
+    top: 180px;
+    right: 0px;
+    background: url(../images/next.gif) 0 0 no-repeat;
+    width: 23px;
+    height: 41px;
+    z-index: 111 !important;
+    display: inline-block;
+}
+
+.next:hover {
+    background-position: 0 bottom;
+}

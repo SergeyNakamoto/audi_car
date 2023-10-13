@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Car Repair | Locations</title>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" media="screen" href="css/reset.css">
+<link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700,300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+<div class="bg">
+  <header>
+    <div class="main wrap">
+      <h1><a href="index.html"><img src="images/logodep.jpg" alt=""></a></h1>
+      <p>1089 Binh Chieu Thu Duc <span>Hotline: 1800 888 861</span></p>
+    </div>
+    <nav>
+      <ul class="menu">
+        <li><a href="index.html" ><i class="fa-solid fa-house fa-bounce"></i></a></li>
+        <li><a href="carList.html">Tổng quan các mẫu xe</a></li>
+        <li><a href="maintenance.html">Dịch vụ khách hàng</a></li>
+        <li><a href="carNews.html">Tin tức & sự kiện</a></li>
+        <li><a href="price-list.html">Bảng giá xe</a></li>
+        <li class="current"><a href="locations.html">Liên hệ chúng tôi</a></li>
+      </ul>
+      <div class="clear"></div>
+    </nav>
+  </header>
+  <section id="content">
+    <div class="sub-page">
+      <div class="sub-page-left box-9">
+        <h2>Thông tin liên lạc</h2>
+        <form id="form" method="post" action="#">
+          <fieldset style="border: none;">
+            <label>
+              <input type="text" value="Họ và tên" onBlur="if(this.value=='') this.value='Họ và tên'" onFocus="if(this.value =='Họ và tên' ) this.value=''">
+            </label>
+            <label>
+              <input type="text" value="Email" onBlur="if(this.value=='') this.value='Email'" onFocus="if(this.value =='Email' ) this.value=''">
+            </label>
+            <label>
+              <input type="text" value="Điện thoại" onBlur="if(this.value=='') this.value='Điện thoại'" onFocus="if(this.value =='Điện thoại' ) this.value=''">
+            </label>
+            <label>
+              <textarea onBlur="if(this.value==''){this.value='Thông tin khác'}" onFocus="if(this.value=='Thông tin khác'){this.value=''}">Thông tin khác</textarea>
+            </label>
+            <div class="btns"><a href="#" class="button">Xoá</a><a href="#" class="button" onClick="document.getElementById('form').submit()">Gửi</a></div>
+          </fieldset>
+        </form>
+      </div>
+      <div class="sub-page-right">
+        <h2>Địa chỉ</h2>
+        <div class="map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.396757780955!2d106.70501127691769!3d10.780893659107527!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f494dc71b9d%3A0x147d5c83885432bd!2zMSDEkC4gVMO0biDEkOG7qWMgVGjhuq9uZywgQuG6v24gTmdow6ksIFF14bqtbiAxLCBUaMOgbmggcGjhu5EgSOG7kyBDaMOtIE1pbmgsIFZpZXRuYW0!5e0!3m2!1sen!2s!4v1695382347977!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <dl class="adr">
+          <dt>1089 Binh Chieu Thu Duc<br></dt>
+          <dd><span>Telephone:</span>+84 (0) 24 3768 5959</dd>
+          <dd><span>Fax:</span>+84 (0) 28 39 243 961</dd>
+          <dd><span>E-mail:</span><a href="#" class="link">mail@fptcarsaigon.org</a></dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+</div>
+<footer>
+  <div class="footerContainer">
+    <div class="socialIcons">
+      <a href=""><i class="fa-brands fa-facebook"></i></a>
+      <a href=""><i class="fa-brands fa-instagram"></i></a>
+      <a href=""><i class="fa-brands fa-twitter"></i></a>
+      <a href=""><i class="fa-brands fa-youtube"></i></a>
+      <a href=""><i class="fa-brands fa-google-plus"></i></a>
+    </div>
+    <div class="footerNav">
+      <ul>
+        <li>
+          <a href="">Trang chủ</a>
+        </li>
+        <li>
+          <a href="">Tin tức</a>
+        </li>
+        <li>
+          <a href="">Về chúng tôi</a>
+        </li>
+        <li>
+          <a href="">Liên lạc chúng tôi</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="footerBottom">
+    <p>FPT Car &copy; 2023 | <a href="#">Privacy Policy</a> | Design by: <a href="#">Tuấn Nguyễn</a></p>
+  </div>
+</footer>
+</body>
+</html>

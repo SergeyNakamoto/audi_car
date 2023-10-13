@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+
+<body>
+    <section class="sec-01">
+        <div class="container">
+            <h2 class="main-title">e-tron GT quattro</h2>
+            <div class="content">
+                <div class="image">
+                    <img src="hinh4.jpeg" alt="">
+                </div>
+                <div class="text-box">
+                    <h3>Tăng tốc hấp dẫn</h3>
+                    <p>Vận hành năng động
+                        Phấn khích trên mọi hành trình: Audi e-tron GT quattro luôn mang đến cho bạn cảm giác phấn khích bởi đằng sau tay lái, nó sở hữu tất cả mọi thứ tạo nên một chiếc xe thể thao.</p>
+                </div>
+            </div>
+            <div class="media-icons">
+                <a href="#" class="icon"><i class="fa-solid fa-bolt"></i></a>
+                <a href="#" class="icon"><i class="fa-solid fa-battery-full"></i></a>
+                <a href="#" class="icon"><i class="fa-solid fa-car"></i></a>
+                <a href="#" class="icon"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="sec-02">
+        <div class="container">
+            <h3 class="section-title">Nội thất</h3>
+            <div class="content">
+                <div class="image">
+                    <img src="hinh5.jpeg" alt="">
+                </div>
+                <div class="info">
+                    <h4 class="info-title">Nội thất</h4>
+                    <p>Tập trung vào nghệ thuật vận hành. Về nội thất, Audi e-tron GT quattro mang đến nhiều tiện nghi phù hợp cho hàng ngày sử dụng với chất lượng cao nhất.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="sec-04">
+        <div class="container full-width">
+            <div class="full-content">
+                <div class="full-image">
+                    <img src="hinh6.jpeg" alt="Ảnh mô tả">
+                </div>
+                <div class="full-info">
+                    <h4 class="info-title" style="margin-top: 45px;">Khái niệm vận hành lôi cuốn: </h4>
+                    <p>Audi e-tron GT quattro là minh chứng cho cuộc sống hiện đại và không ngừng phát triển. Nó thể hiện rõ nét được tính thể thao, sự độc quyền và cảm giác thoải mái. Thêm vào đó, ghế phía thể thao phía trước tích hợp tựa đầu kết hợp các miếng đệm định hình hai bên hỗ trợ tốt hơn khi vào cua và luôn mang lại cảm giác thể thao khi lái.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="sec-02">
+        <div class="container">
+            <h3 class="section-title">Công năng</h3>
+            <div class="content">
+                <div class="image">
+                    <img src="hinh7.jpeg" alt="">
+                </div>
+                <div class="info">
+                    <h4 class="info-title">Công suất điện</h4>
+                    <p>350 kW Tổng mô-men xoắn điện 630 Nm</p>
+                    <h4 class="info-title">Tăng tốc</h4>
+                    <p>4.1 giây</p>
+                    <h4 class="info-title">Phạm vi di chuyển (WLTP)</h4>
+                    <p>488 km</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="sec-03">
+        <div class="container">
+            <h3 class="section-title">Kết nối với chúng tôi</h3>
+            <div class="content">
+                <div class="medai-info">
+                    <li><a href="#"><i class="fab fa-facebook"></i> Facebook </a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i> Instagram </a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i> Twitter </a></li>
+                    <li><a href="#"><i class="fab fa-youtube"></i> Youtube </a></li>
+                    <li><a href="#"><i class="fab fa-linkedin"></i> Linkedin </a></li>
+                </div>
+                <div class="image">
+                    <img src="hinh8.jpeg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        //common reveal
+        ScrollReveal({
+
+            reset: true,
+            distance: '60px',
+            duration: 2500,
+            delay: 400
+
+        });
+        //target elements
+        ScrollReveal().reveal('.main-title, .section-title', { delay: 500, origin: 'left' });
+        ScrollReveal().reveal('.sec-01, .image, .info ', { delay: 600, origin: 'bottom' });
+        ScrollReveal().reveal('.text-box', { delay: 700, origin: 'right' });
+        ScrollReveal().reveal('.media-icons i', { delay: 500, origin: 'bottom', interval: 200 });
+        ScrollReveal().reveal('.sec-02 .image, .sec-03 .image', { delay: 500, origin: 'top' });
+        ScrollReveal().reveal('.medai-info li', { delay: 500, origin: 'left', interval: 200 });
+        ScrollReveal().reveal('.sec-04 .full-image', { delay: 500, origin: 'left' });
+        ScrollReveal().reveal('.sec-04 .full-info', { delay: 700, origin: 'right' });
+    </script>
+</body>
+
+</html>

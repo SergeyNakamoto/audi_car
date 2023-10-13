@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Fcar-shop</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="css/reset.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/slider.css">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700,300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+  <div class="bg">
+    <header>
+      <div class="main wrap">
+        <h1><a href="index.html"><img src="images/logodep.jpg" alt=""></a></h1>
+        <p>1089 Binh Chieu Thu Duc <span>Hotline: 1800 888 861</span></p>
+      </div>
+      <nav>
+        <ul class="menu">
+          <li class="current"><a href="index.html"><i class="fa-solid fa-house fa-bounce"></i></a></li>
+          <li><a href="carList.html">Tổng quan các mẫu xe</a></li>
+          <li><a href="maintenance.html">Dịch vụ khách hàng</a></li>
+          <li><a href="carNews.html">Tin tức & sự kiện</a></li>
+          <li><a href="price-list.html">Bảng giá xe</a></li>
+          <li><a href="locations.html">Liên hệ chúng tôi</a></li>
+        </ul>
+        <div class="clear"></div>
+      </nav>
+    </header>
+    <div class="slider">
+      <div class="list">
+        <div class="items">
+          <img src="images/slider-1-1.jpeg" alt="">
+        </div>
+        <div class="items">
+          <img src="images/slider-5-5.jpeg" alt="">
+        </div>
+        <div class="items">
+          <img src="images/slider-4-4.jpeg" alt="">
+        </div>
+        <div class="items">
+          <img src="images/slider-3-3.jpeg" alt="">
+        </div>
+        <div class="items">
+          <img src="images/slider-2-2.jpeg" alt="">
+        </div>
+      </div>
+      <!-- button  -->
+      <div class="buttons">
+        <button id="prev">
+          < </button>
+            <button id="next"> > </button>
+      </div>
+      <!-- dots -->
+      <ul class="dots">
+        <li class="active"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+    <!-- <div class="banner">
+          <div><span>Audi</span><strong>Сiriure dolor nhendrerit</strong>
+            <p>Chương trình khuyến mãi "Hè sôi động cùng Audi" kèm gói bảo hiểm vật chất 02 năm dành cho tất cả các mẫu
+            </p>
+            <a href="#" class="button">Xem thêm</a>
+          </div>
+        </div> -->
+  </div>
+  </div>
+  <section id="content">
+    <i id="register-form" class="fa-solid fa-phone fa-shake"></i>
+    <div id="contactModal" class="contact-modal">
+      <div class="contact-form">
+        <h2>Form Liên hệ</h2>
+        <form action="#">
+          <label>Giới tính:</label>
+          <select name="gender">
+            <option value="male">Nam</option>
+            <option value="female">Nữ</option>
+          </select>
+          <input type="text" placeholder="Họ và tên" required>
+          <input type="email" placeholder="Email" required>
+          <input type="tel" placeholder="Số điện thoại" required>
+          <textarea placeholder="Thông tin bổ sung..."></textarea>
+          <input type="submit" value="Gửi">
+        </form>
+        <button id="closeButton">X</button>
+      </div>
+    </div>
+    <div class="block-1 box-1">
+      <div> <img src="images/hinh1.jpg" alt="">
+        <p class="text-1">RS e-tron GT <strong>New model coupe</strong></p>
+        <p class="upper"><a href="#" class="link">Đăng kí lái thử</a> Mọi chi tiết thiết kế bên trong Audi RS e-tron GT
+          đều tập trung về hướng người lái nhằm mang đến những trải nghiệm thuận tiện và tuyệt vời nhất.</p>
+        <a href="#" class="button">Xem chi tiết</a>
+      </div>
+      <div> <img src="images/audi-b2.jpeg" alt="">
+        <p class="text-1">A4 <strong>Our best Sedan</strong></p>
+        <p class="upper">Mẫu sedan bán chạy nhất của chúng tôi đã có chỗ đứng trong thị trường xe hơi suốt nhiều năm.
+        </p>
+        <a href="#" class="button">Xem chi tiết</a>
+      </div>
+      <div> <img src="images/audi-b3.jpeg" alt="">
+        <p class="text-1">Q2 <strong>Best SUV</strong></p>
+        <p class="upper">Mẫu SUV mang lại cảm giác mạnh mẽ về vận hành nhưng không kém phần lịch lãm </p>
+        <a href="#" class="button">Xem chi tiết</a>
+      </div>
+      <div> <img src="images/audi-b4.jpeg" alt="">
+        <p class="text-1">Q5 Sportback <strong>Sportback</strong></p>
+        <p class="upper">Mẫu xe đầu bảng của gia đình Q:
+          Audi Q8 55 TFSI quattro</p>
+        <a href="#" class="button">Xem chi tiết</a>
+      </div>
+    </div>
+    <div class="block-2 wrap pad-2">
+      <div class="box-2">
+        <h2 class="clr-1">Đánh giá khách hàng</h2>
+        <div class="comments">
+          <div> “Tôi đã đăng kĩ lái thử thông qua form của cửa hàng, mọi thứ cho tôi một trải nghiệm rất mới mẻ.”
+            <div class="comments-corner"></div>
+          </div>
+          <a href="#">Tuấn Nguyễn</a>
+        </div>
+        <div class="comments">
+          <div> “Audi là hãng xe hạng sang uy tín, tôi đã đặt đặt mua mẫu SUV cỡ D và rất ưng ý.”
+            <div class="comments-corner"></div>
+          </div>
+          <a href="#">Mai Linh</a>
+        </div>
+      </div>
+      <div class="box-3">
+        <h2 class="clr-1">Dịch vụ của chúng tôi</h2>
+        <div class="wrap">
+          <ul class="list-1">
+            <li><a href="#">Xưởng dịch vụ</a></li>
+            <li><a href="#">Tra cứu chiến địch triệu hồi</a></li>
+            <li><a href="#">Đăng kí lái thử xe</a></li>
+            <li><a href="#">Chính sách bảo hành</a></li>
+          </ul>
+
+        </div>
+        <a href="#" class="button-2">Xem chi tiết</a>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="footerContainer">
+      <div class="socialIcons">
+        <a href=""><i class="fa-brands fa-facebook"></i></a>
+        <a href=""><i class="fa-brands fa-instagram"></i></a>
+        <a href=""><i class="fa-brands fa-twitter"></i></a>
+        <a href=""><i class="fa-brands fa-youtube"></i></a>
+        <a href=""><i class="fa-brands fa-google-plus"></i></a>
+      </div>
+      <div class="footerNav">
+        <ul>
+          <li>
+            <a href="">Trang chủ</a>
+          </li>
+          <li>
+            <a href="">Tin tức</a>
+          </li>
+          <li>
+            <a href="">Về chúng tôi</a>
+          </li>
+          <li>
+            <a href="">Liên lạc chúng tôi</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footerBottom">
+      <p>FPT Car &copy; 2023 | <a href="#">Privacy Policy</a> | Design by: <a href="#">Tuấn Nguyễn</a></p>
+    </div>
+  </footer>
+  <script src="./js/app.js"></script>
+</body>
+
+</html>

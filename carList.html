@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>fpt car</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700,300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="css/p2-changeSlide.css">
+  <style>
+    #content {
+      width: 1200px;
+      height: 100%;
+    }
+
+    img {
+      object-fit: contain;
+    }
+
+    .text-box h1 {
+      margin: 0px 0px 0px 40px;
+    }
+
+    .contain-upslide {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      position: absolute;
+      top: 0;
+      transition: 0.5s;
+    }
+
+    .sidebar {
+      width: 60px;
+      height: 18%;
+      padding: 15px 0;
+      box-sizing: border-box;
+      position: absolute;
+      right: 0;
+      top: 36%;
+      background: #7c7575;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .sidebar i {
+      cursor: pointer;
+    }
+
+    .product {
+      margin-bottom: 100px;
+    }
+
+    .product p {
+      color: #fff;
+      font-size: 20px;
+    }
+
+    .content-detail {
+      width: 100%;
+    }
+
+    .wrap-content {
+      width: 100%;
+      display: flex;
+    }
+
+    .login-modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      z-index: 1000;
+    }
+
+    .login-form {
+      background-color: #ffffff;
+      padding: 20px;
+      width: 300px;
+      margin: 0 auto;
+      margin-top: 15%;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      position: relative;
+      border-radius: 10px;
+    }
+
+    #closeButton {
+      position: absolute;
+      right: 10px;
+      top: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="loginModal" class="login-modal">
+    <div class="login-form">
+      <h2>Đăng nhập</h2>
+      <form action="#">
+        <input type="text" placeholder="Tên đăng nhập" required>
+        <input type="password" placeholder="Mật khẩu" required>
+        <input type="submit" value="Đăng nhập">
+      </form>
+      <button id="closeButton">Đóng</button>
+    </div>
+  </div>
+  <div class="bg">
+    <header>
+      <div class="main wrap">
+        <h1><a href="index.html"><img src="images/logodep.jpg" alt=""></a></h1>
+        <p>1089 Binh Chieu Thu Duc <span>Hotline: 1800 888 861</span></p>
+      </div>
+      <nav>
+        <ul class="menu">
+          <li><a href="index.html"><i class="fa-solid fa-house fa-bounce"></i></a></li>
+          <li class="current"><a href="carList.html">Tổng quan các mẫu xe</a></li>
+          <li><a href="maintenance.html">Dịch vụ khách hàng</a></li>
+          <li><a href="carNews.html">Tin tức & sự kiện</a></li>
+          <li><a href="price-list.html">Bảng giá xe</a></li>
+          <li><a href="locations.html">Liên hệ chúng tôi</a></li>
+        </ul>
+        <div class="clear"></div>
+      </nav>
+    </header>
+    <section id="content">
+      <div class="menu-fixed-detail">
+        <button id="btn-button">
+          <i class="fa-solid fa-list fa-beat-fade"></i>
+        </button>
+        <div class="content-small">
+          <select id="productFilter">
+            <option>Mục lục</option>
+            <option value="slide1">e-tron GT</option>
+            <option value="slide2">A4 Sedan</option>
+            <option value="slide3">A6 Sedan</option>
+            <option value="slide4">A7 Sportback</option>
+            <option value="slide5">A8 L</option>
+            <option value="slide6">Q2</option>
+            <option value="slide7">Q3</option>
+            <option value="slide8">Q5</option>
+            <option value="slide9">Q7</option>
+          </select>
+          <button id="filterButton">Lọc</button>
+        </div>
+      </div>
+      <div class="text-box" style="position: initial;">
+        <h1 style="background-image: url(images/back.png);">
+          Các dòng xe Audi
+        </h1>
+      </div>
+      <div class="wrapper">
+      </div>
+    </section>
+    <footer>
+      <div class="footerContainer">
+        <div class="socialIcons">
+          <a href=""><i class="fa-brands fa-facebook"></i></a>
+          <a href=""><i class="fa-brands fa-instagram"></i></a>
+          <a href=""><i class="fa-brands fa-twitter"></i></a>
+          <a href=""><i class="fa-brands fa-youtube"></i></a>
+          <a href=""><i class="fa-brands fa-google-plus"></i></a>
+        </div>
+        <div class="footerNav">
+          <ul>
+            <li>
+              <a href="">Trang chủ</a>
+            </li>
+            <li>
+              <a href="">Tin tức</a>
+            </li>
+            <li>
+              <a href="">Về chúng tôi</a>
+            </li>
+            <li>
+              <a href="">Liên lạc chúng tôi</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footerBottom">
+        <p>FPT Car &copy; 2023 | <a href="#">Privacy Policy</a> | Design by: <a href="#">Tuấn Nguyễn</a></p>
+      </div>
+    </footer>
+  </div>
+  <script type="module" src="js/p2.js"></script>`
+  <script type="module" src="connect-api/getAPI.js"></script>
+  <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+</body>
+
+</html>
