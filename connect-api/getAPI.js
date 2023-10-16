@@ -3,7 +3,7 @@
 function fetchCarData() {
     const audiUrl = 'http://localhost:3000/audi_cars';
     const prodDetailUrl = 'http://localhost:3000/product-detail';
-    const bmwUrl = 'http://localhost:3000/bmw_cars';
+    const bmwUrl = 'http://localhost:3000/customer_information';
 
     return axios.all([axios.get(audiUrl), axios.get(bmwUrl),axios.get(prodDetailUrl)])
         .then(axios.spread((audiResponse, bmwResponse, prodDetailResponse) => {

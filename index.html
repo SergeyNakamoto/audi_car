@@ -4,7 +4,6 @@
 <head>
   <title>Fcar-shop</title>
   <meta charset="utf-8">
-  <link rel="stylesheet" type="text/css" href="css/reset.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" type="text/css" href="css/slider.css">
   <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700,300' rel='stylesheet' type='text/css'>
@@ -78,17 +77,17 @@
     <div id="contactModal" class="contact-modal">
       <div class="contact-form">
         <h2>Form Liên hệ</h2>
-        <form action="#">
+        <form id="myForm" action="post">
           <label>Giới tính:</label>
           <select name="gender">
             <option value="male">Nam</option>
             <option value="female">Nữ</option>
           </select>
-          <input type="text" placeholder="Họ và tên" required>
-          <input type="email" placeholder="Email" required>
-          <input type="tel" placeholder="Số điện thoại" required>
-          <textarea placeholder="Thông tin bổ sung..."></textarea>
-          <input type="submit" value="Gửi">
+          <input type="text" name="name" placeholder="Họ và tên" required>
+          <input type="email" name="email" placeholder="Email" required>
+          <input type="tel" name="phone" placeholder="Số điện thoại" required>
+          <textarea name="additionalInfo" placeholder="Thông tin bổ sung..."></textarea>
+          <button type="submit">Submit</button>
         </form>
         <button id="closeButton">X</button>
       </div>
@@ -179,7 +178,7 @@
       <p>FPT Car &copy; 2023 | <a href="#">Privacy Policy</a> | Design by: <a href="#">Tuấn Nguyễn</a></p>
     </div>
   </footer>
-  <script src="./js/app.js"></script>
+  <script src="./js/p1.js"></script>
+  <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
 </body>
-
 </html>

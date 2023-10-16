@@ -67,3 +67,24 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 });
+
+// Get customere information
+document.getElementById('myForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    // Lấy dữ liệu từ form
+    const formData = new FormData(e.target);
+    const data = {};
+    formData.forEach((value, key) => {
+        data[key] = value;
+    });
+
+    // Sử dụng axios để gửi dữ liệu dưới dạng JSON
+    axios.post('http://localhost:3000/customer_information', data)
+        .then(response => {
+            console.log(response.data);
+        })
+        .catch(error => {
+            console.error('Error posting the data', error);
+        });
+});
