@@ -854,7 +854,7 @@ tr td {
 	height: 100px;
 }
 
-.contact-form input[type="submit"] {
+#submit {
 	background-color: black;
 	color: #fff;
 	border: none;
@@ -866,8 +866,8 @@ tr td {
 	width: 100%;
 }
 
-.contact-form input[type="submit"]:hover {
-	background-color: rgb(105, 97, 97);
+#submit:hover {
+	background-color: rgb(155, 44, 44);
 }
 
 #closeButton {

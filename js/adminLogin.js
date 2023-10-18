@@ -6,46 +6,108 @@ const time_to_show_login = 400;
 const time_to_hidden_login = 200;
 
 function change_to_login() {
-document.querySelector('.cont_forms').className = "cont_forms cont_forms_active_login";  
-document.querySelector('.cont_form_login').style.display = "block";
-document.querySelector('.cont_form_sign_up').style.opacity = "0";               
+    document.querySelector('.cont_forms').className = "cont_forms cont_forms_active_login";
+    document.querySelector('.cont_form_login').style.display = "block";
+    document.querySelector('.cont_form_sign_up').style.opacity = "0";
 
-setTimeout(function(){  document.querySelector('.cont_form_login').style.opacity = "1"; },time_to_show_login);  
-  
-setTimeout(function(){    
-document.querySelector('.cont_form_sign_up').style.display = "none";
-},time_to_hidden_login);  
-  }
+    setTimeout(function () { document.querySelector('.cont_form_login').style.opacity = "1"; }, time_to_show_login);
 
-  const time_to_show_sign_up = 100;
-  const time_to_hidden_sign_up = 400;
+    setTimeout(function () {
+        document.querySelector('.cont_form_sign_up').style.display = "none";
+    }, time_to_hidden_login);
+}
+
+const time_to_show_sign_up = 100;
+const time_to_hidden_sign_up = 400;
 
 function change_to_sign_up(at) {
-  document.querySelector('.cont_forms').className = "cont_forms cont_forms_active_sign_up";
-  document.querySelector('.cont_form_sign_up').style.display = "block";
-document.querySelector('.cont_form_login').style.opacity = "0";
-  
-setTimeout(function(){  document.querySelector('.cont_form_sign_up').style.opacity = "1";
-},time_to_show_sign_up);  
+    document.querySelector('.cont_forms').className = "cont_forms cont_forms_active_sign_up";
+    document.querySelector('.cont_form_sign_up').style.display = "block";
+    document.querySelector('.cont_form_login').style.opacity = "0";
 
-setTimeout(function(){   document.querySelector('.cont_form_login').style.display = "none";
-},time_to_hidden_sign_up);  
+    setTimeout(function () {
+        document.querySelector('.cont_form_sign_up').style.opacity = "1";
+    }, time_to_show_sign_up);
+
+    setTimeout(function () {
+        document.querySelector('.cont_form_login').style.display = "none";
+    }, time_to_hidden_sign_up);
 
 
-}    
+}
 
 const time_to_hidden_all = 500;
 
 function hidden_login_and_sign_up() {
 
-document.querySelector('.cont_forms').className = "cont_forms";  
-document.querySelector('.cont_form_sign_up').style.opacity = "0";               
-document.querySelector('.cont_form_login').style.opacity = "0"; 
+    document.querySelector('.cont_forms').className = "cont_forms";
+    document.querySelector('.cont_form_sign_up').style.opacity = "0";
+    document.querySelector('.cont_form_login').style.opacity = "0";
 
-setTimeout(function(){
-document.querySelector('.cont_form_sign_up').style.display = "none";
-document.querySelector('.cont_form_login').style.display = "none";
-},time_to_hidden_all);  
-  
-  }
- 
+    setTimeout(function () {
+        document.querySelector('.cont_form_sign_up').style.display = "none";
+        document.querySelector('.cont_form_login').style.display = "none";
+    }, time_to_hidden_all);
+}
+
+
+// login function
+function login() {
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    axios.get('http://localhost:3000/adminLogin')
+        .then(function (response) {
+            const users = response.data;
+            const user = users.find(u => u.username === email && u.password === password);
+
+            if (user) {
+                window.location.href = './adminDashBoard.html';
+            } else {
+                alert('Invalid username or password.');
+            }
+        })
+        .catch(function (error) {
+            console.log(error);
+            alert('An error occurred while trying to login.');
+        });
+}
+// Change password
+function changePassword() {
+    const email = document.getElementById("change_email").value;
+    const currentPassword = document.getElementById("current_password").value;
+    const newPassword = document.getElementById("new_password").value;
+
+    // Kiểm tra mật khẩu hiện tại trước khi gửi request cập nhật
+    axios.get('http://localhost:3000/adminLogin')
+        .then(function (response) {
+            const users = response.data;
+            const user = users.find(u => u.username === email && u.password === currentPassword);
+            
+            if (user) {
+                // Gọi API để cập nhật mật khẩu
+                axios.post('http://localhost:3000/adminLogin', {
+                    username: email,
+                    newPassword: newPassword
+                })
+                .then(function (response) {
+                    if (response.data.success) {
+                        alert('Password changed successfully.');
+                    } else {
+                        alert('Error updating password.');
+                    }
+                })
+                .catch(function (error) {
+                    console.log(error);
+                    alert('An error occurred while trying to update password.');
+                });
+
+            } else {
+                alert('Invalid email or current password.');
+            }
+        })
+        .catch(function (error) {
+            console.log(error);
+            alert('An error occurred while trying to verify current password.');
+        });
+}

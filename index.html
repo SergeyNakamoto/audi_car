@@ -8,7 +8,6 @@
   <link rel="stylesheet" type="text/css" href="css/slider.css">
   <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700,300' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 
 <body>
@@ -76,18 +75,27 @@
     <i id="register-form" class="fa-solid fa-phone fa-shake"></i>
     <div id="contactModal" class="contact-modal">
       <div class="contact-form">
-        <h2>Form Liên hệ</h2>
+        <h2>Trao đổi với chúng tôi</h2>
         <form id="myForm" action="post">
-          <label>Giới tính:</label>
+          <label>Thông tin quý khách cần biết
+          </label>
           <select name="gender">
-            <option value="male">Nam</option>
-            <option value="female">Nữ</option>
+            <option value="">Chọn giới tính</option>
+            <option value="Nam">Nam</option>
+            <option value="Nữ">Nữ</option>
+          </select>
+          <select name="considering">
+            <option value="">Thông tin quý khách cần biết</option>
+            <option value="Bán hàng">Bán hàng</option>
+            <option value="Dịch vụ">Dịch vụ</option>
+            <option value="Góp ý website">Góp ý website</option>
+            <option value="Tư vấn tài chính">Tư vấn tài chính</option>            
           </select>
           <input type="text" name="name" placeholder="Họ và tên" required>
           <input type="email" name="email" placeholder="Email" required>
           <input type="tel" name="phone" placeholder="Số điện thoại" required>
           <textarea name="additionalInfo" placeholder="Thông tin bổ sung..."></textarea>
-          <button type="submit">Submit</button>
+          <button id="submit" type="submit">Submit</button>
         </form>
         <button id="closeButton">X</button>
       </div>

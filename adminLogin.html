@@ -23,11 +23,8 @@
                     </div>
                     <div class="col_md_sign_up">
                         <div class="cont_ba_opcitiy">
-                            <h2>Tạo tài khoản</h2>
-
-
+                            <h2>Đổi mật khẩu</h2>
                             <p>Enthusiasm is the mother of effort, and without it nothing great was ever achieved.</p>
-
                             <button class="btn_sign_up" onclick="change_to_sign_up()">SIGN UP</button>
                         </div>
                     </div>
@@ -36,7 +33,6 @@
                     <div class="cont_img_back_grey">
                         <img src="images/audiLogin.jpeg" alt="" />
                     </div>
-
                 </div>
                 <div class="cont_forms">
                     <div class="cont_img_back_">
@@ -44,29 +40,27 @@
                     </div>
                     <div class="cont_form_login">
                         <a href="#" onclick="hidden_login_and_sign_up()"><i class="material-icons">&#xE5C4;</i></a>
-                        <h2>LOGIN</h2>
-                        <input type="text" placeholder="Email" />
-                        <input type="password" placeholder="Password" />
-                        <button class="btn_login" onclick="change_to_login()">LOGIN</button>
+                        <h2>Đăng nhập</h2>
+                        <input type="text" id="email" placeholder="Email" />
+                        <input type="password" id="password" placeholder="Password" />
+                        <button class="btn_login" onclick="login()">LOGIN</button>
                     </div>
-
                     <div class="cont_form_sign_up">
                         <a href="#" onclick="hidden_login_and_sign_up()"><i class="material-icons">&#xE5C4;</i></a>
-                        <h2>SIGN UP</h2>
-                        <input type="text" placeholder="Email" />
+                        <h2>Đổi mật khẩu</h2>
+                        <input type="text" id="change_email" placeholder="Email" />
                         <input type="text" placeholder="User" />
-                        <input type="password" placeholder="Password" />
-                        <input type="password" placeholder="Confirm Password" />
-                        <button class="btn_sign_up" onclick="change_to_sign_up()">SIGN UP</button>
-
+                        <input type="password" id="current_password" placeholder="Password" />
+                        <input type="password" id="new_password" placeholder="Confirm Password" />
+                        <button class="btn_sign_up" onclick="changePassword()">CHANGE PASSWORD</button>
                     </div>
-
                 </div>
-
             </div>
         </div>
     </div>
     <script src="js/adminLogin.js"></script>
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> -->
 </body>
 
 </html>
