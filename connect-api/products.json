@@ -6,34 +6,34 @@
       "image_detail_1": "images/page2-product1-1.jpeg",
       "image_detail_2": "images/page2-product1-2.jpeg",
       "model": "e-tron GT",
-      "price": "5.220.000.000 ₫",
+      "price": "5.220.000.000",
       "engine": "2.0L-7AT",
-      "quantity": 15
+      "quantity": 45
     },
     {
       "id": 2,
       "image": "images/page2-img2.jpeg",
       "image_detail": "images/page2-product2.jpeg",
       "model": "A4 Sedan",
-      "price": "1.099.000.000 ₫",
+      "price": "1.099.000.000",
       "engine": "2.0L-7AT",
-      "quantity": 15
+      "quantity": 25
     },
     {
       "id": 3,
       "image": "images/page2-img3.jpeg",
       "image_detail": "images/page2-product3.jpeg",
       "model": "A6 Sedan",
-      "price": "2.960.000.000 ₫",
+      "price": "2.960.000.000 ",
       "engine": "2.0L-7AT",
-      "quantity": 7
+      "quantity": 10
     },
     {
       "id": 4,
       "image": "images/page2-img4.jpeg",
       "image_detail": "images/page2-product4.jpeg",
       "model": "A7 Sportback",
-      "price": "5.850.000.000 ₫",
+      "price": "5.850.000.000 ",
       "engine": "3.0L-8AT",
       "quantity": 9
     },
@@ -42,7 +42,7 @@
       "image": "images/page2-img5.jpeg",
       "image_detail": "images/page2-product5.jpeg",
       "model": "A8L PLUS",
-      "price": "1.990.000.000 ₫",
+      "price": "1.990.000.000 ",
       "engine": "3.0L-7AT",
       "quantity": 12
     },
@@ -51,7 +51,7 @@
       "image": "images/page2-img6.jpeg",
       "image_detail": "images/page2-product6.jpeg",
       "model": "Q2",
-      "price": "1.750.000.000 ₫",
+      "price": "1.750.000.000 ",
       "engine": "1.4L-8AT",
       "quantity": 20
     },
@@ -60,7 +60,7 @@
       "image": "images/page2-img7.jpeg",
       "image_detail": "images/page2-product7.jpeg",
       "model": "Q3",
-      "price": "2.010.000.000 ₫",
+      "price": "2.010.000.000 ",
       "engine": "2.0L-7AT",
       "quantity": 15
     },
@@ -69,7 +69,7 @@
       "image": "images/page2-img8.jpeg",
       "image_detail": "images/page2-product8.jpeg",
       "model": "Q5",
-      "price": "2.780.000.000 ₫",
+      "price": "2.780.000.000 ",
       "engine": "2.0L-7AT",
       "quantity": 15
     },
@@ -78,17 +78,9 @@
       "image": "images/page2-img9.jpeg",
       "image_detail": "images/page2-product9.jpeg",
       "model": "Q7",
-      "price": "4.020.000.000 ₫",
+      "price": "4.020.000.000 ",
       "engine": "2.0L-8AT",
       "quantity": 12
-    },
-    {
-      "model": "Audi Test",
-      "price": "400000",
-      "engine": "gT 20",
-      "quantity": "30",
-      "URL": "https://mediaservice.audi.com/media/live/50900/fly1400x601n8/f83rj7/2022.png?wid=550",
-      "id": 10
     }
   ],
   "product-detail": [
@@ -304,21 +296,27 @@
     {
       "gender": "Nam",
       "considering": "Bán hàng",
-      "name": "Tuan ",
+      "name": "Tuan",
       "email": "tuannqps27163@fpt.edu.vn",
       "phone": "2131589789",
       "additionalInfo": "toi can bao duong xe",
       "id": 2
+    },
+    {
+      "gender": "Nam",
+      "considering": "Góp ý website",
+      "name": "Tuan",
+      "email": "hai@gmail.com",
+      "phone": "123125124",
+      "date": "2023-10-03",
+      "additionalInfo": "sdsadasdasd",
+      "id": 3
     }
   ],
   "adminLogin": [
     {
       "username": "tuan123@gmail.com",
       "password": "tuan123"
-    },
-    {
-      "username": "user2@example.com",
-      "password": "password2"
     }
   ]
 }

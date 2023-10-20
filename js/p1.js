@@ -50,17 +50,17 @@ document.addEventListener('DOMContentLoaded', function () {
     const contactModal = document.getElementById('contactModal');
     const closeButton = document.getElementById('closeButton');
 
-    // Mở form khi click vào một nút (bạn cần tạo một nút để kích hoạt form liên hệ)
+    
     document.querySelector("#register-form").addEventListener('click', function () {
         contactModal.style.display = 'block';
     });
 
-    // Đóng form khi click vào nút đóng
+    
     closeButton.addEventListener('click', function () {
         contactModal.style.display = 'none';
     });
 
-    // Đóng form khi click ra ngoài form
+    
     window.onclick = function (event) {
         if (event.target == contactModal) {
             contactModal.style.display = "none";
@@ -68,18 +68,18 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
-// Get customere information
+
 document.getElementById('myForm').addEventListener('submit', function (e) {
     e.preventDefault();
 
-    // Lấy dữ liệu từ form
+    
     const formData = new FormData(e.target);
     const data = {};
     formData.forEach((value, key) => {
         data[key] = value;
     });
 
-    // Sử dụng axios để gửi dữ liệu dưới dạng JSON
+    
     axios.post('http://localhost:3000/customer_information', data)
         .then(response => {
             console.log(response.data);

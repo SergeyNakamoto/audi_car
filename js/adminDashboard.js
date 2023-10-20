@@ -7,7 +7,7 @@ axios.get('http://localhost:3000/audi_cars')
                 `
             <div class="box">
             <h3>${element.model}</h3>
-            <p>Giá: ${element.price}</p>
+            <p>Giá: ${element.price} ₫</p>
             <p>Động cơ: ${element.engine}</p>
             <p> Số lượng: ${element.quantity}</p>
             <button data-id="${element.id}">Xoá mẫu xe</button>
@@ -21,7 +21,7 @@ axios.get('http://localhost:3000/audi_cars')
             button.addEventListener('click', function (e) {
                 const carId = e.target.getAttribute('data-id');
 
-                // Send a DELETE request to the server
+                
                 axios.delete(`http://localhost:3000/audi_cars/${carId}`)
                     .then(response => {
                         if (response.status === 200) {
@@ -38,4 +38,4 @@ axios.get('http://localhost:3000/audi_cars')
     .catch(function (error) {
         console.error("Lỗi khi tải dữ liệu:", error);
     });
-// Delete function
+

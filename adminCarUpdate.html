@@ -4,8 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <title>Dashboard | By Code Info</title>
-  <link rel="stylesheet" href="css/admin.css" />
-  <!-- Font Awesome Cdn Link -->
+  <link rel="stylesheet" href="css/admin.css" /> 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
 </head>
 
@@ -29,7 +28,7 @@
             <i class="fas fa-wallet"></i>
             <span class="nav-item">Doanh số</span>
           </a></li>
-        <li><a href="">
+        <li><a href="sellingAnalyst.html">
             <i class="fas fa-chart-bar"></i>
             <span class="nav-item">Phân tích</span>
           </a></li>
@@ -88,7 +87,7 @@
           <ul>
             <li><a href="adminDashboard.html">Thống kê xe tồn kho</a></li>
             <li><a class="active" href="adminCarUpdate.html">Cập nhật dòng xe mới</a></li>
-            <li><a href="">Sắp ra mắt</a></li>
+            <li><a href="adminFixProduct.html">Cập nhật thông tin sản phẩm</a></li>
           </ul>
           <div id="course">
             <form id="audiForm">
@@ -116,14 +115,12 @@
   <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
   <script>
     function submitForm() {
-      // Lấy giá trị từ form
       const model = document.getElementById('model').value;
       const price = document.getElementById('price').value;
       const engine = document.getElementById('engine').value;
-      const quantity = document.getElementById('quantity').value;
+      const quantity = parseInt(document.getElementById('quantity').value);
       const URL = document.getElementById('URL').value;
 
-      // Tạo một đối tượng để chứa dữ liệu
       const carData = {
         model: model,
         price: price,
@@ -131,8 +128,6 @@
         quantity: quantity,
         URL: URL
       };
-
-      // Sử dụng axios để gửi dữ liệu đến API
       axios.post('http://localhost:3000/audi_cars', carData)
         .then(response => {
           console.log('Dữ liệu đã được thêm thành công:', response.data);
